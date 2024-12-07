@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*
+{
+  margin: 0;
+  letter-spacing: 0.1rem;
+  line-height: 30px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+body{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f5f5;
+  scrollbar-color: red;
+}
+.nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 101;
+  background: #f9f9f9;
+  border-bottom: solid 1px black;
+}
+.nav a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #113;
+  transition: 200ms all ease;
+}
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  cursor: default;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+
+.navbar{
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-bottom: solid 1px black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+.navbar img{
+  border: 1px solid black;
+}
+.container{
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+ul{
+  margin-left: 50px;
+  list-style-type: disc;
+}
+li{
+  margin: 20px;
+}
+p{
+  letter-spacing: 0.1rem;
+  line-height: 30px;
+  margin: 10px;
+}
+@media(max-width: 420px){
+  .nav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    left: -100%;
+    transition: all 200ms ease;
+    background: #f9f9f9;
+  border-bottom: solid 1px black;
+  }
+  .nav.open{
+    left: 0;
+  }
+  .nav.open + .overlay{
+    visibility: visible;
+    opacity: 1;
+  }
+  .nav a{
+    width: 100%;
+    height: 20%;
+  }
+}
+h3{
+  margin-left: 20px;
+}
+.footer{
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
+  height: 100%;
+  background: #7600c1;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+.footer a{
+  background: #a820ff;
+  width: 100%;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
